@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  app:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+      args:
+        FROM_IMAGE: 14
+    environment:
+      NODE_ENV: development
+    command: ["yarn", "watch"]
+    ports:
+      - 8080:80
+    volumes:
+      - ../app:/var/www
+      - ../docker/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh

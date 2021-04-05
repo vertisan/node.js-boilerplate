@@ -1,0 +1,12 @@
+# Generic
+.DS_Store
+.idea/
+
+# Project
+.env*
+!.env.dist
+!.env.test
+docker/docker-compose.*.yml
+!docker/docker-compose.dev.yml
+!docker/docker-compose.test.yml
+!.gitkeep
